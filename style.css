@@ -1,0 +1,106 @@
+/* Task is to Display 4 Images 
+One image for each viewport */
+/* The logic implemented here will be 
+1. img1 will be displayed when screen size is 1-576px
+2. img2 will be displayed when screen size is 576-768px
+3. img3 will be displayed when screen size is 768-992px
+4. img4 will be displayed when screen size is > 992px */
+
+body {
+  background-color: lightgrey;
+  color: #0f044c;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+img {
+  margin: 20px auto;
+}
+
+.container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .img1 {
+    display: block;
+  }
+  .img2 {
+    display: none;
+  }
+  .img3 {
+    display: none;
+  }
+  .img4 {
+    display: none;
+  }
+  .md,
+  .lg,
+  .xlg {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .img1 {
+    display: none;
+  }
+  .img2 {
+    display: block;
+  }
+  .img3 {
+    display: none;
+  }
+  .img4 {
+    display: none;
+  }
+  .sm,
+  .lg,
+  .xlg {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .img1 {
+    display: none;
+  }
+  .img2 {
+    display: none;
+  }
+  .img3 {
+    display: block;
+  }
+  .img4 {
+    display: none;
+  }
+  .sm,
+  .md,
+  .xlg {
+    display: none;
+  }
+  .lg {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .img1,
+  .img2,
+  .img3 {
+    display: none;
+  }
+  .img4 {
+    display: block;
+  }
+  .sm,
+  .md,
+  .lg {
+    display: none;
+  }
+  .xlg {
+    display: block;
+  }
+}
